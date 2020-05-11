@@ -1,0 +1,12 @@
+<h1>Your result</h1>
+
+<ul>
+  <li>Attempt: <%= @attempt%></li>
+  <li>"<%= @result[:translation]["word"]%>"" is in dictionnary: <strong><%= @result[:translation]["found"]%></strong>
+  <li>Length: <%= @result[:translation]["length"]%> letters</li>
+  <li>Time: <%= @result[:time]%> seconds</li>
+  <li> <strong> <%= @result[:message]%> </strong></li>
+  <li>Score: <%= @result[:score]%> points</li>
+</ul>
+
+<%= link_to("Restart", "/new") %>
