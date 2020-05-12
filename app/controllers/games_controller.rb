@@ -40,7 +40,7 @@ class GamesController < ApplicationController
   end
 
   def score_and_message(attempt, translation, grid, time)
-    if translation
+    if translation['found']
       if included?(attempt.upcase, grid)
         score = compute_score(attempt, time).round
         [score, 'well done']
